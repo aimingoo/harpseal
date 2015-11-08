@@ -41,7 +41,7 @@ options = {
 > for detail, @see ${harpseal}/infra/specifications/*
 > for Promise in lua, @see [https://github.com/aimingoo/Promise](https://github.com/aimingoo/Promise)
 
-all interfaces are promise supported except pedt.upgrade() and helpers.
+all interfaces are promise supported except pedt:upgrade() and helpers.
 
 ## pedt:run
 ```lua
@@ -49,21 +49,21 @@ function pedt:run(task, args)
 ```
 run a task (taskId, function or taskObject) with args.
 
-## pedt.map
+## pedt:map
 ```lua
 function pedt:map(distributionScope, taskId, args)
 ```
 map taskId to distributionScope with args, and get result array.
 
-distributionScope will parse by pedt.require().
+distributionScope will parse by pedt:require().
 
-## pedt.execute_task
+## pedt:execute_task
 ```lua
 function pedt:execute_task(taskId, args)
 ```
-run a taskId with args. pedt.run(taskId) will call this.
+run a taskId with args. pedt:run(taskId) will call this.
 
-## pedt.register_task
+## pedt:register_task
 ```lua
 function pedt:register_task(task)
 ```
@@ -81,7 +81,7 @@ this is n4c expanded interface, resource query interface emmbedded.
 
 ## pedt:upgrade
 ```lua
-function pedt.upgrade(newOptions)
+function pedt:upgrade(newOptions)
 ```
 upgrade current Harpseal/PEDT instance with newOptions. @see [options](#options)
 
