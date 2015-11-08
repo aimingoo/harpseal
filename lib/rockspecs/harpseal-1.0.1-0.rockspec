@@ -1,5 +1,5 @@
 package = "harpseal"
-version = "1.0.0-0"
+version = "1.0.1-0"
 source = {
   url = "https://github.com/aimingoo/harpseal/archive/v1.0.1.tar.gz",
   dir = "harpseal-1.0.1"
