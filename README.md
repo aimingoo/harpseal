@@ -11,7 +11,12 @@ or
 
 #import and usage
 ```lua
+-- require when installed by luarocks
 local Harpseal = require('harpseal');
+
+-- or hard load from lua_path/directory
+-- local Harpseal = require('lib.Distributed');
+
 local options = {};
 local pedt = Harpseal:new(options);
 
