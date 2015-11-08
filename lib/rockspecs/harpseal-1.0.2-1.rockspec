@@ -10,7 +10,7 @@ description = {
     harpseal is implement of PEDT(Parallel Exchangeable Distribution Task) specifications in lua.
   ]],
   homepage = "https://github.com/aimingoo/harpseal",
-  license = "Apache-2.0 <http://opensource.org/licenses/Apache-2.0>"
+  license = "Apache-2.0"
 }
 dependencies = {
   "lua >= 5.1",

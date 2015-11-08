@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------------
--- Distributed processing module in lua v1.0.0
+-- Distributed processing module in lua v1.0.3
 -- Author: aimingoo@wandoujia.com
--- Copyright (c) 2015.10
+-- Copyright (c) 2015.11
 --
 -- The distributed processing module from NGX_4C architecture
 --	1) N4C is programming framework.
@@ -348,15 +348,6 @@ end
 -- 	*) MUST: catch error by caller for these interfaces
 -- -------------------------------------------------------------------------------------------------------
 local D = setmetatable({}, {__index=def})
-if mod_prefix then
-	D.infra = {
-		taskhelper = require(mod_prefix..'infra.taskhelper'),
-		httphelper = require(mod_prefix..'infra.httphelper'),
-	}
-	D.tools = {
-		taskloader = require(mod_prefix..'tools.taskloader'),
-	}
-end
 
 function D:run(task, args)
 	local t = type(task)
@@ -422,5 +413,14 @@ return {
 		instance.distributed_request = invalid_promised_request
 		instance:upgrade(opt)
 		return instance;
-	end
+	end,
+
+	infra = mod_prefix and {
+		taskhelper = require(mod_prefix..'infra.taskhelper'),
+		httphelper = require(mod_prefix..'infra.httphelper'),
+	} or nil,
+
+	tools = mod_prefix and {
+		taskloader = require(mod_prefix..'tools.taskloader'),
+	} or nil,
 }

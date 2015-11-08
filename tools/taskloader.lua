@@ -1,15 +1,15 @@
 ---------------------------------------------------------------------------------------------------------
 -- Distributed task loader
 -- Author: aimingoo@wandoujia.com
--- Copyright (c) 2015.09
+-- Copyright (c) 2015.11
 --
 -- Note:
 --	*) load taskObject from task script file with the util class.
 --	*) task helper class inherite and enhanced.
 --	*) need call register_task().
 ---------------------------------------------------------------------------------------------------------
-
-local def = require('infra.taskhelper')
+local prefix = string.gsub(({...})[1] or '', 'tools.taskloader$', '')
+local def = require(prefix..'infra.taskhelper')
 local loadkit = require('tools.loadkit')
 local Loader = setmetatable({}, {__index=def})
 

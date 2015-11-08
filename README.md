@@ -167,6 +167,9 @@ try these:
 
 # history
 ```text
+2015.11.08	v1.0.3 released.
+	- minor changes for luarocks.
+	- done.
 2015.11.08	v1.0.2 released.
 	- minor changes and rockspec updated again.
 	- a register center published at harpseal.dbg.register_center.
