@@ -11,9 +11,9 @@ or
 
 #import and usage
 ```lua
-var Harpseal = require('harpseal');
-var options = {};
-var pedt = Harpseal:new(options);
+local Harpseal = require('harpseal');
+local options = {};
+local pedt = Harpseal:new(options);
 
 pedt:run(..)
 	:andThen(function(result){
@@ -132,10 +132,12 @@ local TaskLoader = Harpseal.tools.taskloader;
 -- or
 -- local TaskLoader = require('harpseal.tools.taskloader');
 
--- need a register center
---	*) you can copy dbg_register_center.lua to your project folder from $(harpseal)/infra/.
+-- register center for debug only
+--	*) you can copy dbg_register_center.lua to your project folder from $(harpseal)/infra/, or
+--	*) require() it when luarocks installed, or
+--	*) load 3rd register center.
 local pedt = Harpseal:new({
-	task_register_center = require(..),
+	task_register_center = require('harpseal.dbg.register_center'), -- need luarocks
 })
 local loader = TaskLoader:new({ publisher = pedt })
 
@@ -165,5 +167,10 @@ try these:
 
 # history
 ```text
-	2015.11.08	v1.0.0 released.
+2015.11.08	v1.0.2 released.
+	- minor changes and rockspec updated again.
+	- a register center published at harpseal.dbg.register_center.
+2015.11.08	v1.0.1 released.
+	- minor changes and rockspec updated.
+2016.11.08	v1.0.0 released.
 ```

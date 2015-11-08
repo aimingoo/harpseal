@@ -6,7 +6,7 @@
 -- Note:
 --	*) a interface of distributed http client requests
 ---------------------------------------------------------------------------------------------------------
-local Promise = require('Promise')
+local Promise = require('lib.Promise')
 local copas = require('copas')
 local http = require('socket.http')
 local limited =  require('copas.limit')
