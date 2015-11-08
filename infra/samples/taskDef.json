@@ -1,0 +1,3 @@
+{
+  "x": { "run": "script:lua:utf8:function() return 'Hi!' end" }
+}
