@@ -71,17 +71,17 @@ run a task and return taskId.
 
 the "task" is a taskDef text or local taskObject.
 
-## pedt.require
+## pedt:require
 ```lua
-function pedt:require(token)
+function pedt:require(tokevan)
 ```
 require a resource by token. the token is distributionScope or system token, or other.
 
 this is n4c expanded interface, resource query interface emmbedded.
 
-## pedt.upgrade
-```javascript
-this.upgrade = function(newOptions)
+## pedt:upgrade
+```lua
+function pedt.upgrade(newOptions)
 ```
 upgrade current Harpseal/PEDT instance with newOptions. @see [options](#options)
 
