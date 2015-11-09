@@ -3,6 +3,27 @@ harpseal is implement of PEDT - Parallel Exchangeable Distribution Task specific
 
 PEDT v1.1 specifications supported.
 
+**Table of Contents**
+
+- [harpseal](#)
+- [install](#)
+- [import and usage](#)
+- [options](#)
+- [interfaces](#)
+	- [pedt:run](#)
+	- [pedt:map](#)
+	- [pedt:execute_task](#)
+	- [pedt:register_task](#)
+	- [pedt:require](#)
+	- [pedt:upgrade](#)
+- [helpers](#)
+	- [Harpseal.infra.taskhelper](#)
+	- [Harpseal.infra.httphelper](#)
+	- [Harpseal.tools.taskloader](#)
+- [testcase](#)
+- [history](#)
+
+
 #install
 > git clone https://github.com/aimingoo/harpseal
 
@@ -92,11 +113,11 @@ upgrade current Harpseal/PEDT instance with newOptions. @see [options](#options)
 
 this is harpseal expanded interface.
 
-## helpers
+# helpers
 
 some tool/helpers include in the package.
 
-### Harpseal.infra.taskhelper
+## Harpseal.infra.taskhelper
 ```lua
 local Harpseal = require('harpseal');
 local def = Harpseal.infra.taskhelper;
@@ -112,7 +133,7 @@ local taskDef = {
 a taskDef define helper. @see:
 > $(harpseal)/testcase/t_loadTask.lua
 
-### Harpseal.infra.httphelper
+## Harpseal.infra.httphelper
 ```lua
 local Harpseal = require('harpseal');
 local httphelper = Harpseal.infra.httphelper;
@@ -130,7 +151,7 @@ httphelper.start()
 ```
 a recommented/standard distributed request, and activate copas parallel loop with call .start() method in your code.
 
-### Harpseal.tools.taskloader
+## Harpseal.tools.taskloader
 ```lua
 local Harpseal = require('harpseal');
 local TaskLoader = Harpseal.tools.taskloader;
