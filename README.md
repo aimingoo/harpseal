@@ -5,7 +5,6 @@ PEDT v1.1 specifications supported.
 
 **Table of Contents**
 
-- [harpseal](#)
 - [install](#)
 - [import and usage](#)
 - [options](#)
