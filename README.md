@@ -3,26 +3,6 @@ harpseal is implement of PEDT - Parallel Exchangeable Distribution Task specific
 
 PEDT v1.1 specifications supported.
 
-**Table of Contents**
-
-- [install](#)
-- [import and usage](#)
-- [options](#)
-- [interfaces](#)
-	- [pedt:run](#)
-	- [pedt:map](#)
-	- [pedt:execute_task](#)
-	- [pedt:register_task](#)
-	- [pedt:require](#)
-	- [pedt:upgrade](#)
-- [helpers](#)
-	- [Harpseal.infra.taskhelper](#)
-	- [Harpseal.infra.httphelper](#)
-	- [Harpseal.tools.taskloader](#)
-- [testcase](#)
-- [history](#)
-
-
 #install
 > git clone https://github.com/aimingoo/harpseal
 
