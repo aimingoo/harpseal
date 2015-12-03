@@ -15,7 +15,7 @@ return {
 	-- array of task
 	m = {
 		def:map('?', 'testcase.tasks.t_task4'),
-		def:reduce('?', 'testcase.tasks.t_task4', function()end),
+		def:reduce('?', 'testcase.tasks.t_task4', function(self)end),
 		def:run(function(self)end),
 	},
 
