@@ -16,10 +16,18 @@ PEDT v1.1 specifications supported.
   * [pedt:register_task](#pedtregister_task)
   * [pedt:require](#pedtrequire)
   * [pedt:upgrade](#pedtupgrade)
+  * [pedt.LOGGER](#pedtlogger)
+  * [pedt.TASK_XXX](#pedttask_xxx)
+  * [pedt.version](#pedtversion)
 * [helpers](#helpers)
   * [Harpseal.infra.taskhelper](#harpsealinfrataskhelper)
   * [Harpseal.infra.httphelper](#harpsealinfrahttphelper)
   * [Harpseal.tools.taskloader](#harpsealtoolstaskloader)
+  * [pedt.lua utility](#pedtlua-utility)
+    * [action: help](#action-help)
+    * [action: add](#action-add)
+    * [action: run](#action-run)
+    * [action: methods ](#action-methods)
 * [testcase](#testcase)
 * [history](#history)
 
@@ -444,7 +452,7 @@ task:99914b932bd37a50b983c5e7c90ae93b loaded from json.
 }
 ```
 
-### action: <method>
+### action: methods
 
 execute a task center specific method. ex:
 
